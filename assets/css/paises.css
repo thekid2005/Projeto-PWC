@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.objeto {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.barra-pesquisa {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%;
+  text-align: center;
+}
+
+.barra-pesquisa h3 {
+  color: #000;
+  font-family: "Outfit", serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.barra-pesquisa .input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.barra-pesquisa .input-group input,
+.barra-pesquisa .input-group select {
+  width: 20rem;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.barra-pesquisa .input-group input:focus,
+.barra-pesquisa .input-group select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.barra-pesquisa .input-group select {
+  cursor: pointer;
+}
+
+.barra-pesquisa button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.barra-pesquisa button:focus {
+  outline: none;
+}
+
+.barra-pesquisa select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.display-paises {
+  background: rgba(217, 217, 217, 0.3);
+  width: 90rem;
+}
+
+.paises {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination .botao {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.pagination .botao.desativado {
+  background-color: #ccc;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.pagination .botao:hover:not(.desativado) {
+  background-color: #0056b3;
+}
