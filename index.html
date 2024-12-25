@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+
+  <body >
+    <!-- navbar -->
+    <section class="objeto">
+      <nav class="navbar navbar-expand-lg fixed-top bg-white">
+        <div class="container">
+            <img src="assets/img/Logótipo_Politécnico_Leiria_01 1.png" alt="logo IPL" >
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse texto-nav" id="navbarNav">
+                <ul class="navbar-nav margin">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="paises.html">Países</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Loja</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Favoritos</a>
+                    </li>
+                    <li class="nav-item"> 
+                      <button type="button" class="btn btn-outline-primary rounded-0">Contactos</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </nav>
+
+      <!-- carrousel de img -->
+      <div class="container-fluid carousel-tamanho">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide ">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active japao" data-bs-interval="10000">
+              <img src="assets/img/japao.png" class="d-block img-japao" alt="imagem do japao">
+              <div class="texto-carrousel-japao">
+                <div class="japao-caption">
+                  <h2>Descobre o Japão</h2>
+                  <p>Faz uma viagem pelos destinos mais deslumbrantes do mundo. Das ruas vibrantes de Nova Iorque às
+                    antigas ruínas de Roma, cada imagem revela um lugar à espera de ser explorado.
+                  </p>
+                  <p>Quer seja para aventura, relaxamento ou descoberta, encontra o teu próximo destino connosco.</p>
+                </div>
+                <button type="button" class="btn btn-outline-primary rounded-0"">Explorar</button>
+              </div>
+            </div>
+            <div class="carousel-item  australia" data-bs-interval="10000">
+              <img src="assets/img/autralia.png" class="d-block img-australia" alt="imagem da australia">
+              <div class="texto-carrousel-autralia">
+                <div class="australia-caption">
+                  <h2>Descobre a Austrália</h2>
+                  <p>Descobre a vibrante Grande Barreira de Coral, a famosa Ópera de Sydney e o vasto Outback.</p>
+                  <p>A Austrália oferece uma vida selvagem única, costas ensolaradas e paisagens diversificadas.</p>
+                </div>
+                <button type="button" class="btn btn-outline-light rounded-0"">Explorar</button>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon text-white" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!--cards aleatorios-->
+      <div class="container-paises card-texto">
+        <h2>Escolha o País</h2>
+        <p>
+          Escolha  um destino para explorar a sua singularidade, cultura e atrações. 
+          Descubra os lugares mais cativantes do mundo, cada um oferecendo experiências inesquecíveis.
+        </p>
+      </div>
+      <div class="container-paises text-center">
+        <div class="row row-cols-1 row-cols-md-3" id="cards">
+          
+        </div>
+      </div>
+
+      <div class="container-paises cidade">
+        <img src="assets/img/img_cidade.png" alt="">
+        <div class="cidade-texto">
+          <h2>Explora o mundo connosco</h2>
+          <p>
+            Embarca numa aventura para descobrir os destinos mais cativantes do mundo, desde paisagens urbanas vibrantes 
+            até serenas maravilhas naturais. Explora o encanto único de cada país, rico em cultura, história e experiências 
+            inesquecíveis. Deixa-nos ser o teu guia até lugares que inspiram e despertam o espírito de exploração. Em cada viagem, 
+            descobre novas perspetivas e tesouros escondidos à espera de serem revelados. Começa a tua aventura hoje e cria memórias 
+            que durarão para toda a vida.
+          </p>
+          <button type="button" class="btn btn-light rounded-0">Explorar</button>
+        </div>
+      </div>
+
+      <!--About us-->
+      <div class="about">
+        <h2>Sobre Nós</h2>
+        <div class="container mt-4">
+          <div class="row justify-content-center gap-4">
+            <!-- Card 1 -->
+            <div class="col-auto">
+              <div class="card">
+                <img src="assets/img/Bernardo.png" class="card-img-top mx-auto d-block mt-3" alt="Foto do aluno Bernardo">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Bernardo Marques</h5>
+                  <p class="card-text text-muted">Estudante</p>
+                  <a href="#" class="btn btn-outline-primary rounded-0">Mais informações →</a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 2 -->
+            <div class="col-auto">
+              <div class="card">
+                <img src="assets/img/Ricardo.png" class="card-img-top mx-auto d-block mt-3" alt="Foto do aluno Ricardo">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Ricardo Ferreira</h5>
+                  <p class="card-text text-muted">Estudante</p>
+                  <a href="#" class="btn btn-outline-primary rounded-0">Mais informações →</a>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Card 3 -->
+            <div class="col-auto">
+              <div class="card">
+                <img src="assets/img/aluno3.jpg" class="card-img-top mx-auto d-block mt-3" alt="Foto do aluno Gonçalo">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Gonçalo Santos</h5>
+                  <p class="card-text text-muted">Estudante</p>
+                  <a href="#" class="btn btn-outline-primary rounded-0">Mais informações →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+      </div>
+      <!--parte de baixo-->
+      <div class="rodape">
+        <div class="rodape-img">
+          <img src="assets/img/Logótipo_Politécnico_Leiria_01 1.png" alt="Logotipo IPL">
+        </div>
+        <div class="texto-rodape">
+          <a href="index.html" class="texto-link">Home</a>
+          <a href="paises.html" class="texto-link">Países</a>
+          <a href="" class="texto-link">Loja</a>
+          <a href="" class="texto-link">Favoritos</a>
+          <a href="" class="texto-link">Contactos</a>
+        </div>
+        <div class="icons">
+          <img src="assets/img/in.png" alt="linkedin logo" class="icon-hover">
+          <img src="assets/img/fb.png" alt="facebook logo" class="icon-hover">  
+          <img src="assets/img/insta.png" alt="instagram logo" class="icon-hover">
+          <img src="assets/img/x.png" alt="X logo" class="icon-hover">
+        </div>
+        <hr>
+        <p>© 2024 Direitos de Autor, Todos os direitos reservados</p>
+      </div>     
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

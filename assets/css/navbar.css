@@ -1,0 +1,40 @@
+/*codigo da fonte*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.margin {
+  margin-left: 38rem;
+}
+
+.navbar {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.texto-nav {
+  color: #000;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.navbar-nav.margin .nav-item {
+  margin-right: 2.75rem;
+}
+
+/* Ajusta o último espaçamento entre "Favoritos" e o botão */
+.navbar-nav.margin .nav-item:last-child {
+  margin-right: 0;
+}
+
+.navbar-nav.margin .nav-item:nth-last-child(2) {
+  margin-right: 2.56rem;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1559B7;
+  text-decoration: none; 
+}

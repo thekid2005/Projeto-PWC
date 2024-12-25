@@ -1,0 +1,339 @@
+/*codigo da fonte*/
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.objeto {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container-paises {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*carrousel*/
+
+.img-japao {
+  width: 28.875rem;
+  height: 23rem;
+  margin-top: 4.44rem;
+  margin-left: 52.44rem;
+}
+
+.img-australia {
+  width: 35.25rem;
+  height: 23.375rem;
+  margin-top: 4.56rem;
+  margin-left: 50.19rem;
+}
+
+.texto-carrousel-japao h2 {
+  color: #000;
+  font-family: "Outfit", serif;
+  font-size: 4.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.texto-carrousel-japao button {
+  margin-left: 6.25rem;
+  margin-top: 2.75rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 0.69rem;
+  padding-top: 0.69rem;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.texto-carrousel-japao p {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.japao {
+  background: #ededed;
+  width: 90rem;
+  height: 33.5625rem;
+}
+
+.japao-caption {
+  width: 42.938rem;
+  height: 12.438rem;
+  margin-left: 6.25rem;
+  margin-top: -20rem;
+}
+
+.japao-caption h2 {
+  margin-bottom: 1.69rem;
+}
+
+.carousel-control-prev {
+  left: -8rem;
+}
+
+.carousel-control-next {
+  right: -8rem;
+}
+
+.australia {
+  background: #000;
+  width: 90rem;
+  height: 33.5625rem;
+}
+
+.australia-caption h2 {
+  color: #fff;
+  font-family: "Outfit", serif;
+  font-size: 4.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.australia-caption p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Outfit;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/*cards paise*/
+.card-container {
+  display: flex;
+  justify-content: center;
+
+  margin-top: rem;
+}
+
+.card {
+  width: 20.9375rem;
+  height: 19.5625rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 7.81rem;
+}
+
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h5 {
+  margin: 10px 0 0;
+  font-size: 20px;
+  color: #333;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #333;
+}
+
+.card-texto {
+  margin-top: 4.56rem;
+}
+
+.card-texto h5 {
+  color: #000;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.92rem;
+}
+
+.card-texto p {
+  width: 42.9375rem;
+  height: 2.4375rem;
+  margin-bottom: 3rem;
+  color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card-container h3 {
+  margin-top: 1.75rem;
+}
+
+.cidade img {
+  display: flex;
+  background: rgba(0, 0, 0, 0.78);
+}
+
+.cidade-texto {
+  width: 57.875rem;
+  height: 16.313rem;
+  margin-top: -22.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cidade h2 {
+  color: #fff;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 1.44rem;
+}
+
+.cidade p {
+  color: rgba(255, 255, 255, 0.81);
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 2.88rem;
+}
+
+.cidade button {
+  color: #000;
+  justify-content: center;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 0.69rem 2.13rem;
+}
+
+/*about*/
+
+.about h2 {
+  color: #000;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 11.6rem;
+}
+
+.about img {
+  width: 18.0625rem;
+  height: 16.5625rem;
+}
+
+.card {
+  width: 20.9375rem;
+  height: 27.75rem;
+}
+
+.card img {
+  width: 18.0625rem;
+  height: 16.5625rem;
+  object-fit: cover;
+}
+
+/*footer*/
+
+.rodape {
+  background: rgba(217, 217, 217, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.rodape img {
+  width: 14.375rem;
+  height: 5.8125rem;
+  margin-top: 2.56rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.texto-rodape {
+  margin-top: 1.06rem;
+
+  color: #000;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.texto-link {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+}
+
+.texto-link:hover {
+  color: #1559b7;
+}
+/*icons*/
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.75rem;
+  margin: 0 auto;
+}
+
+.icons img {
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.3s ease; /* Transição suave */
+}
+
+hr {
+  width: 90rem;
+  height: 0rem;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: rgba(0, 0, 0, 0.26);
+  margin-top: 3.69rem;
+  margin-bottom: 1.44rem;
+}
+
+.rodape p {
+  color:#283646;
+  text-align: center;
+  font-family: "Outfit", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 1.5rem */
+}
