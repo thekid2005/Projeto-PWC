@@ -1,46 +1,44 @@
-async function getRandomCountries() {
+async function obterPaisesAleatorios() {
   const response = await fetch("https://restcountries.com/v3.1/all");
-  const countries = await response.json();
+  const paises = await response.json();
 
-  // Seleciona 3 países aleatórios
-  const randomCountries = [];
-  while (randomCountries.length < 3) {
-    const randomIndex = Math.floor(Math.random() * countries.length);
-    const country = countries[randomIndex];
+  const paisesAleatorios = [];
+  while (paisesAleatorios.length < 3) {
+    const indiceAleatorio = Math.floor(Math.random() * paises.length);
+    const pais = paises[indiceAleatorio];
 
     // Verifica se o país já foi adicionado
-    if (!randomCountries.includes(country)) {
-      randomCountries.push(country);
+    if (!paisesAleatorios.includes(pais)) {
+      paisesAleatorios.push(pais);
     }
   }
 
-  return randomCountries;
+  return paisesAleatorios;
 }
 
 // Função para exibir os cards
-function displayCards(countries) {
+function mostrarCartoes(paises) {
   const container = document.getElementById("cards");
-  container.innerHTML = ""; // Limpa os cards anteriores
+  container.innerHTML = ""; // Limpa os cartões anteriores
 
-  countries.forEach((country) => {
-    const card = document.createElement("div");
-    card.classList.add("col");
+  paises.forEach((pais) => {
+    const cartao = document.createElement("div");
+    cartao.classList.add("col");
 
-    // Cria o card com a imagem da bandeira e nome
-    card.innerHTML = `
+    // Cria o cartão com a imagem da bandeira e nome
+    cartao.innerHTML = `
         <div class="card">
-          <img src="${country.flags.png}" class="card-img-top" alt="Flag of ${country.name.common}">
+          <img src="${pais.flags.png}" class="card-img-top" alt="Bandeira de ${pais.name.common}">
           <div class="card-body">
-            <h5 class="card-title">${country.name.common}</h5>
+            <h5 class="card-title">${pais.name.common}</h5>
           </div>
         </div>
       `;
 
-    container.appendChild(card);
+    container.appendChild(cartao);
   });
 }
 
-// Chama as funções
-getRandomCountries().then((countries) => {
-  displayCards(countries);
+obterPaisesAleatorios().then((paises) => {
+  mostrarCartoes(paises);
 });

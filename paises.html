@@ -46,27 +46,25 @@
       </nav>
 
         <div class="display-paises">
-            <div class="barra-pesquisa">
-                <h2>Pesquisar por país ou continente</h2>
-                <div class="input-group">
-                    <input type="text" id="searchInput" class="form-control" placeholder="Introduza o nome do país">
-                    <select id="continenteSelect" class="form-control">
-                        <option value=" ">Selecione o continente</option>
-                        <option value="Africa">África</option>
-                        <option value="Asia">Ásia</option>
-                        <option value="Europe">Europa</option>
-                        <option value="Oceania">Oceania</option>
-                        <option value="Americas">América</option>
-                        <option value="Antarctic">Antártica</option>
-                    </select>
-                    <button type="button" id="searchButton" class="btn btn-primary">Pesquisar</button>
-                </div>
-                
+          <div class="barra-pesquisa">
+            <h2>Pesquisar por país ou moeda</h2>
+            <div class="input-group">
+                <input type="text" id="searchInput" class="form-control" placeholder="Introduza o nome do país">
+                <select id="moedaSelect" class="form-control">
+                  <option value=" ">Selecione a moeda</option>
+                  <option value="eur">Euro</option>
+                  <option value="gbp">Libra</option>
+                  <option value="usd">Dólar</option>
+                  <option value="chf">Franco Suíço</option>
+                  <option value="outra">Outra</option>
+              </select>
+                <button type="button" id="searchButton" class="btn btn-primary">Pesquisar</button>
             </div>
-            <div class="paises" id="countries-container"></div>
+          </div>
+          <div class="paises" id="countries-container"></div>
             <div class="pagination">
-                <a href="#" class="botao desativado" id="pagina-anterior">Anterior</a>
-                <a href="#" class="botao" id="proxima-pagina">Próxima</a>
+              <a href="#" class="botao desativado" id="pagina-anterior">Anterior</a>
+              <a href="#" class="botao" id="proxima-pagina">Próxima</a>
             </div>
         </div>
     </section>

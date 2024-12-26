@@ -4,7 +4,7 @@ const botaoAnterior = document.getElementById("pagina-anterior");
 const botaoProxima = document.getElementById("proxima-pagina");
 const inputPesquisa = document.getElementById("searchInput");
 const botaoPesquisa = document.getElementById("searchButton");
-const continenteSelect = document.getElementById("continenteSelect");
+const moedaSelect = document.getElementById("moedaSelect");
 
 let paginaAtual = 1;
 const itensPorPagina = 9; // 3 cards por linha, 3 linhas
@@ -33,13 +33,15 @@ function mostrarPaises(paises) {
     const card = document.createElement("div");
     card.className = "card";
     card.innerHTML = `
-      <img src="${pais.flags.png}" alt="Bandeira de ${pais.name.common}">
-      <h3>${pais.name.common}</h3>
-      <p>População: ${pais.population.toLocaleString()}</p>
-      <a href="detalhes-pais.html?pais=${
-        pais.name.common
-      }" class="btn btn-info">Ver mais</a>
-    `;
+            <img src="${pais.flags.png}" alt="Bandeira de ${
+      pais.name.common
+    }" style="width: 100%; height: 150px; object-fit: cover;">
+            <h3>${pais.name.common}</h3>
+            <p>População: ${pais.population.toLocaleString()}</p>
+            <a href="detalhes-pais.html?pais=${
+              pais.name.common
+            }" class="btn btn-info">Ver mais</a>
+        `;
     container.appendChild(card);
   });
 
@@ -55,11 +57,18 @@ function filtrarPaises(paises, termo) {
   );
 }
 
-// Filtrar os países com base no continente
-function filtrarPorContinente(paises, continente) {
-  return paises.filter((pais) =>
-    continente === " " ? true : pais.region === continente
-  );
+// Filtrar os países com base na moeda
+function filtrarPorMoeda(paises, moeda) {
+  if (moeda === " ") {
+    return paises; // Retorna todos os países se "Selecione a moeda" estiver selecionado
+  }
+
+  return paises.filter((pais) => {
+    const moedasPais = pais.currencies
+      ? Object.keys(pais.currencies).map((code) => code.toLowerCase())
+      : [];
+    return moedasPais.includes(moeda.toLowerCase());
+  });
 }
 
 // Inicializar a aplicação
@@ -85,13 +94,14 @@ async function inicializar() {
     }
   });
 
-  // Botão de pesquisa por nome e continente
+  // Botão de pesquisa por nome
   botaoPesquisa.addEventListener("click", () => {
     const termo = inputPesquisa.value;
-    const continente = continenteSelect.value;
+    const moeda = moedaSelect.value;
     paginaAtual = 1;
+
     paisesFiltrados = filtrarPaises(paises, termo);
-    paisesFiltrados = filtrarPorContinente(paisesFiltrados, continente);
+    paisesFiltrados = filtrarPorMoeda(paisesFiltrados, moeda);
     mostrarPaises(paisesFiltrados);
   });
 
@@ -100,21 +110,24 @@ async function inicializar() {
     if (evento.key === "Enter") {
       evento.preventDefault();
       const termo = inputPesquisa.value;
-      const continente = continenteSelect.value;
+      const moeda = moedaSelect.value;
       paginaAtual = 1;
+
       paisesFiltrados = filtrarPaises(paises, termo);
-      paisesFiltrados = filtrarPorContinente(paisesFiltrados, continente);
+      paisesFiltrados = filtrarPorMoeda(paisesFiltrados, moeda);
       mostrarPaises(paisesFiltrados);
     }
   });
 
-  // Filtrar por continente
-  continenteSelect.addEventListener("change", () => {
-    const continente = continenteSelect.value;
-    const termo = inputPesquisa.value;
+  // Filtrar por moeda
+  moedaSelect.addEventListener("change", () => {
+    const moeda = moedaSelect.value;
     paginaAtual = 1;
-    paisesFiltrados = filtrarPorContinente(paises, continente);
-    paisesFiltrados = filtrarPaises(paisesFiltrados, termo);
+
+    paisesFiltrados = filtrarPorMoeda(paises, moeda);
+    if (inputPesquisa.value.trim() !== "") {
+      paisesFiltrados = filtrarPaises(paisesFiltrados, inputPesquisa.value);
+    }
     mostrarPaises(paisesFiltrados);
   });
 }

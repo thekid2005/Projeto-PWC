@@ -1,8 +1,7 @@
-// Recuperar o nome do país a partir da URL
+
 const urlParams = new URLSearchParams(window.location.search);
 const nomePais = urlParams.get("pais");
 
-// URL da API para obter o país específico
 const URL_API = `https://restcountries.com/v3.1/name/${nomePais}?fullText=true`;
 
 // Elementos do HTML para exibir os dados
@@ -17,7 +16,6 @@ const paisRegiao = document.getElementById("paisRegiao");
 const paisSubRegiao = document.getElementById("paisSubRegiao");
 const paisFusoHorario = document.getElementById("paisFusoHorario");
 
-// Função para buscar as informações do país
 async function obterDetalhesPais() {
   try {
     const resposta = await fetch(URL_API);
@@ -50,5 +48,4 @@ async function obterDetalhesPais() {
   }
 }
 
-// Inicializar a página de detalhes
 obterDetalhesPais();

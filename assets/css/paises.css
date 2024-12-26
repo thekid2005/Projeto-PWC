@@ -95,8 +95,9 @@
 
 .card img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 .pagination {
