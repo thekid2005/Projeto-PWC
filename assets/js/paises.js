@@ -7,9 +7,9 @@ const botaoPesquisa = document.getElementById("searchButton");
 const moedaSelect = document.getElementById("moedaSelect");
 
 let paginaAtual = 1;
-const itensPorPagina = 9; // 3 cards por linha, 3 linhas
+const itensPorPagina = 9; 
 let paisesFiltrados = [];
-let paisesFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos")) || []; // Carregar países favoritos do LocalStorage
+let paisesFavoritos = JSON.parse(localStorage.getItem("paisesFavoritos")) || [];
 
 // Obter países da API
 async function obterPaises() {
@@ -23,12 +23,10 @@ async function obterPaises() {
   }
 }
 
-// Salvar países favoritos no LocalStorage
 function salvarFavoritos() {
   localStorage.setItem("paisesFavoritos", JSON.stringify(paisesFavoritos));
 }
 
-// Renderizar os cards para a página atual
 function mostrarPaises(paises) {
   container.innerHTML = "";
   const inicio = (paginaAtual - 1) * itensPorPagina;
@@ -50,26 +48,23 @@ function mostrarPaises(paises) {
     container.appendChild(card);
   });
 
-  // Atualizar os botões de paginação
   botaoAnterior.classList.toggle("desativado", paginaAtual === 1);
   botaoProxima.classList.toggle("desativado", fim >= paises.length);
   
-  // Adicionar evento de clique nos botões "Adicionar aos favoritos"
   document.querySelectorAll(".botao-favoritos").forEach((botao) => {
     botao.addEventListener("click", (evento) => {
       const paisNome = evento.target.getAttribute("data-pais");
       if (paisesFavoritos.includes(paisNome)) {
         paisesFavoritos = paisesFavoritos.filter((nome) => nome !== paisNome); // Remover dos favoritos
       } else {
-        paisesFavoritos.push(paisNome); // Adicionar aos favoritos
+        paisesFavoritos.push(paisNome);
       }
-      salvarFavoritos(); // Salvar no LocalStorage
+      salvarFavoritos();
       mostrarPaises(paisesFiltrados); 
     });
   });
 }
 
-// Filtrar os países com base na pesquisa de nome
 function filtrarPaises(paises, termo) {
   return paises.filter((pais) =>
     pais.name.common.toLowerCase().includes(termo.toLowerCase())
@@ -79,7 +74,7 @@ function filtrarPaises(paises, termo) {
 // Filtrar os países com base na moeda
 function filtrarPorMoeda(paises, moeda) {
   if (moeda === " ") {
-    return paises; // Retorna todos os países se "Selecione a moeda" estiver selecionado
+    return paises;
   }
 
   return paises.filter((pais) => {
@@ -138,7 +133,6 @@ async function inicializar() {
     }
   });
 
-  // Filtrar por moeda
   moedaSelect.addEventListener("change", () => {
     const moeda = moedaSelect.value;
     paginaAtual = 1;

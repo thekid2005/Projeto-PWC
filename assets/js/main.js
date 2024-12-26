@@ -16,7 +16,7 @@ async function obterPaisesAleatorios() {
   return paisesAleatorios;
 }
 
-// Função para exibir os cards
+
 function mostrarCartoes(paises) {
   const container = document.getElementById("cards");
   container.innerHTML = ""; // Limpa os cartões anteriores
@@ -25,7 +25,6 @@ function mostrarCartoes(paises) {
     const cartao = document.createElement("div");
     cartao.classList.add("col");
 
-    // Cria o cartão com a imagem da bandeira e nome
     cartao.innerHTML = `
         <div class="card">
           <img src="${pais.flags.png}" class="card-img-top" alt="Bandeira de ${pais.name.common}">
