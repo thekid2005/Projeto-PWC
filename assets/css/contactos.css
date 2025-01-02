@@ -148,3 +148,7 @@ h1 {
 .contactos .termos-container button:hover {
   background-color: #0056b3;
 }
+
+.termos{
+  text-align: center;
+}

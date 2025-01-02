@@ -13,7 +13,7 @@
   align-items: center;
   flex-direction: column;
 }
-  
+
 /*carrousel*/
 
 .img-japao {
@@ -118,7 +118,7 @@
   margin-top: 1.69rem;
 }
 
-.texto-carrousel-autralia button{
+.texto-carrousel-autralia button {
   margin-left: 6.25rem;
   margin-top: 2.75rem;
   padding-left: 2.5rem;
@@ -336,7 +336,6 @@
 .icons img {
   width: 2.5rem;
   height: 2.5rem;
-  transition: all 0.3s ease; /* Transição suave */
 }
 
 hr {
@@ -356,5 +355,262 @@ hr {
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 150%; /* 1.5rem */
+  line-height: 150%;
+}
+
+/*MOBILE*/
+
+@media (max-width: 768px) {
+  .objeto {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .container-paises {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .carousel-inner {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    display: none;
+  }
+
+  .carousel-item.active {
+    display: block;
+  }
+
+  .texto-carrousel-japao {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  .img-japao {
+    max-width: 25%;
+    height: auto;
+    margin-left: 1rem;
+    margin-top: 11rem;
+  }
+
+  .img-australia {
+    max-width: 25%;
+    height: auto;
+    margin-left: 1rem;
+    margin-top: 22rem;
+  }
+
+  .texto-carrousel-japao h2 {
+    color: #000;
+    font-family: "Outfit", serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 2rem;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .texto-carrousel-japao p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .texto-carrousel-japao button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .texto-carrousel-japao button:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .texto-carrousel-australia p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .australia-caption h2 {
+    font-size: 2.5rem;
+  }
+
+  .australia-caption p {
+    font-size: 1rem;
+  }
+
+  .texto-carrousel-autralia button {
+    font-size: 1rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  .carousel-indicators {
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 90%;
+    margin: 1rem;
+    height: auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .card h5 {
+    font-size: 1.2rem;
+  }
+
+  .container-paises.card-texto {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .container-paises.card-texto h2 {
+    font-size: 1.8rem;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+
+  .container-paises.card-texto p {
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.7);
+    line-height: 1.5;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    margin: 0 auto;
+  }
+
+  /* Footer */
+  .rodape {
+    padding: 1rem;
+    text-align: center;
+    background: rgba(217, 217, 217, 0.3);
+  }
+
+  .rodape img {
+    width: 60%;
+    height: auto;
+  }
+
+  .texto-rodape {
+    font-size: 1rem;
+    color: #000;
+  }
+
+  .texto-link {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .texto-link:hover {
+    color: #1559b7;
+  }
+
+  /* Ajustes para a div cidade */
+  .cidade {
+    width: 100%;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+    position: relative;
+    margin-top: 5rem;
+  }
+
+  .cidade-texto {
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .cidade h2 {
+    margin-top: 9.3rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000;
+  }
+
+  .cidade p {
+    font-size: 0.6rem;
+    margin-bottom: 2rem;
+    color: white;
+  }
+
+  .cidade button {
+    padding: 0.75rem 2rem;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-family: "Outfit", serif;
+    margin-top: 1rem;
+  }
+
+  .cidade img {
+    width: 100%;
+    height: 150%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  hr {
+    max-width: 100%;
+  }
 }

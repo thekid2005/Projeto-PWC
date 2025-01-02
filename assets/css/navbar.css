@@ -1,4 +1,4 @@
-/*codigo da fonte*/
+/* Fonte */
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .margin {
@@ -9,6 +9,9 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .texto-nav {
@@ -25,7 +28,6 @@
   margin-right: 2.75rem;
 }
 
-/* Ajusta o último espaçamento entre "Favoritos" e o botão */
 .navbar-nav.margin .nav-item:last-child {
   margin-right: 0;
 }
@@ -35,6 +37,58 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #1559B7;
-  text-decoration: none; 
+  color: #1559b7;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0;
+    position: fixed;
+  }
+
+  .navbar-collapse {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  .navbar-collapse.show {
+    display: flex;
+  }
+
+  .navbar-nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    text-align: left;
+    width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-nav .nav-link {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+
+  .navbar-toggler {
+    display: block;
+    position: fixed;
+    right: 15px;
+    top: 3.5%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    z-index: 999;
+  }
+
+  .navbar img {
+    max-width: 150px;
+    height: auto;
+  }
 }
