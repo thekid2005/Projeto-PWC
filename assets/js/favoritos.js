@@ -25,7 +25,7 @@ async function carregarFavoritos() {
       const card = document.createElement("div");
       card.classList.add("card");
 
-      const bandeiraUrl = pais.flags.png || "URL-da-bandeira-padrao";  // Defina um URL padrão caso não exista a bandeira
+      const bandeiraUrl = pais.flags.png || "URL-da-bandeira-padrao"; 
 
       
       card.innerHTML = `

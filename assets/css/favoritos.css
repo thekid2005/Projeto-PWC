@@ -11,14 +11,14 @@ body{
 #countries-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 colunas */
-  gap: 20px; /* Espaçamento entre os cards */
+  gap: 20px;
   padding: 20px;
-  justify-items: center; /* Centraliza os cards */
+  justify-items: center; 
 }
 
 .card {
   width: 100%;
-  max-width: 250px; /* Limita a largura máxima do card */
+  max-width: 250px; 
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 10px;
@@ -46,7 +46,7 @@ body{
 }
 
 .card:hover {
-  transform: scale(1.05); /* Efeito de zoom ao passar o mouse sobre o card */
+  transform: scale(1.05); 
 }
 
 .card .btn {

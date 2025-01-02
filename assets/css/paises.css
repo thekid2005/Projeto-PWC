@@ -113,7 +113,7 @@ body {
 .botao-favoritos,
 .btn-info {
   padding: 10px 20px;
-  background-color: #17a2b8; /* Cor do botão "Ver mais" */
+  background-color: #17a2b8; 
   color: white;
   border: none;
   border-radius: 8px;
@@ -124,7 +124,7 @@ body {
 
 .botao-favoritos:hover,
 .btn-info:hover {
-  background-color: #138496; /* Cor do botão "Ver mais" ao passar o mouse */
+  background-color: #138496; 
 }
 
 .pagination {
@@ -199,7 +199,7 @@ body {
 
   .card img {
     width: 100%;
-    height: auto; /* Imagens ajustando a altura proporcionalmente */
+    height: auto; 
     object-fit: cover;
     border-radius: 8px;
   }
@@ -207,7 +207,7 @@ body {
   .pagination {
     display: flex;
     justify-content: center;
-    width: 100%; /* Ajusta a largura da paginação */
+    width: 100%; 
     margin: 20px 0;
     padding: 0;
 
