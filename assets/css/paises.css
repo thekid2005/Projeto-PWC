@@ -8,6 +8,7 @@
 
 body {
   background: rgba(217, 217, 217, 0.3);
+  box-sizing: border-box;
 }
 
 .barra-pesquisa {
@@ -155,3 +156,74 @@ body {
 .pagination .botao:hover:not(.desativado) {
   background-color: #0056b3;
 }
+
+
+@media (max-width: 768px) {
+  .barra-pesquisa .input-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .display-paises{
+    max-width: 100%;
+  }
+
+  h2{
+    max-width: 90%;
+    margin-left: 1.5rem;
+  }
+
+  .barra-pesquisa .input-group input,
+  .barra-pesquisa .input-group select,
+  .barra-pesquisa button {
+    width: 90%;
+    margin-bottom: 10px;
+  
+  }
+
+  .paises {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    margin-left: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto; /* Imagens ajustando a altura proporcionalmente */
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Ajusta a largura da paginação */
+    margin: 20px 0;
+    padding: 0;
+
+  }
+
+  .pagination .botao {
+    font-size: 12px;
+    padding: 8px 12px;
+    width: auto;
+    min-width: 45px;
+    text-align: center;
+  }
+
+  .pagination .botao.desativado {
+    background-color: #ccc;
+    pointer-events: none;
+  }
+}
+
